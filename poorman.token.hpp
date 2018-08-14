@@ -4,7 +4,6 @@
  */
 #pragma once
 
-#include <osiolib/eosio.hpp>
 
 #include <string>
 
