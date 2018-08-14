@@ -4,9 +4,6 @@
  */
 #pragma once
 
-
-#include <string>
-
 namespace eosiosystem {
    class system_contract;
 }
