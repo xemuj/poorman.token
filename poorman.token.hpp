@@ -4,6 +4,11 @@
  */
 #pragma once
 
+#include <../eosiolib/asset.hpp>
+#include <../eosiolib/eosio.hpp>
+
+#include <string>
+
 namespace eosiosystem {
    class system_contract;
 }
