@@ -38,6 +38,13 @@
           {"name":"memo", "type":"string"}
        ]
     },{
+       "name": "ping",
+       "base": "",
+       "fields": [
+          {"name":"to", "type":"account_name"},
+          {"name":"memo", "type":"string"}
+       ]
+    },{    
        "name": "issuefree",
        "base": "",
        "fields": [
