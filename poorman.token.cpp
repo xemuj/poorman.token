@@ -7,7 +7,7 @@
 
 namespace eosio {
 
-void ping( account_name to,
+void token::ping( account_name to,
            string memo ) {
     
     eosio_assert( _self != to, "cannot ping self" );
