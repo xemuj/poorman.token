@@ -15,8 +15,7 @@ void token::ping( account_name to,
     eosio_assert( is_account( to ), "to account does not exist");
     require_recipient( to );
   }
-  
-  
+           
 void token::create( account_name issuer,
                     asset        maximum_supply )
 {
