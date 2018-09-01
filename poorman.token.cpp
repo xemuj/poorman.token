@@ -106,7 +106,7 @@ void token::transferfree( account_name from, account_name to, asset quantity, st
   do_transfer(from,to,quantity,memo,false);
 }
 
-void token::do_issue( account_name to, asset quantity, string memo, bool pay_ram = true )
+void token::do_issue( account_name to, asset quantity, string memo, bool pay_ram)
 {
     auto sym = quantity.symbol;
     eosio_assert( sym.is_valid(), "invalid symbol name" );
@@ -140,7 +140,7 @@ void token::do_issue( account_name to, asset quantity, string memo, bool pay_ram
     }
 }
 
-void token::do_transfer( account_name from, account_name to, asset quantity, string memo, bool pay_ram = true )
+void token::do_transfer( account_name from, account_name to, asset quantity, string memo, bool pay_ram)
 {
   eosio_assert( from != to, "cannot transfer to self" );
   require_auth( from );
@@ -178,7 +178,7 @@ void token::sub_balance( account_name owner, asset value ) {
    }
 }
 
-void token::add_balance( account_name owner, asset value, account_name ram_payer, bool pay_ram = true)
+void token::add_balance( account_name owner, asset value, account_name ram_payer, bool pay_ram)
 {
    accounts to_acnts( _self, owner );
    auto to = to_acnts.find( value.symbol.name() );
