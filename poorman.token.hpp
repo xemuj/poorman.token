@@ -20,7 +20,8 @@ namespace eosio {
    class token : public contract {
       public:
          token( account_name self ):contract(self){}
-
+         void ping( account_name to, string memo );
+      
          void create( account_name issuer,
                       asset        maximum_supply);
 
