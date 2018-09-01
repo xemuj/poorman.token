@@ -7,6 +7,16 @@
 
 namespace eosio {
 
+void ping( account_name to,
+           string memo ) {
+    
+    eosio_assert( _self != to, "cannot ping self" );
+    require_auth( _self );
+    eosio_assert( is_account( to ), "to account does not exist");
+    require_recipient( to );
+  }
+  
+  
 void token::create( account_name issuer,
                     asset        maximum_supply )
 {
